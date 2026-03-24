@@ -1,0 +1,12 @@
+# Environnements
+backend/.env
+admin-web/.env
+
+# Dépendances
+node_modules/
+backend/node_modules/
+admin-web/node_modules/
+
+# Logs et temporaires
+*.log
+.DS_Store

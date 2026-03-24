@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "EPT Connect",
+    "slug": "ept-connect",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A2540"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/votre-project-id"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eptconnect.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A2540"
+      },
+      "package": "com.eptconnect.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-av",
+      "expo-file-system",
+      "expo-video"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "votre-project-id"
+      }
+    }
+  }
+}
