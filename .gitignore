@@ -1,6 +1,7 @@
 # Environnements
 backend/.env
 admin-web/.env
+mobile/.env
 
 # Dépendances
 node_modules/
