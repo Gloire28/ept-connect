@@ -1,0 +1,14 @@
+# admin-web/netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Variables d'environnement pour Vite
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirections pour React Router (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
