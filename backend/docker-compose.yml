@@ -5,8 +5,7 @@ services:
     image: ept-connect-backend:latest
     container_name: ept-connect-backend
     restart: unless-stopped
-    env_file:
-      - .env
+  
     ports:
       - "5000:5000"
     build:
