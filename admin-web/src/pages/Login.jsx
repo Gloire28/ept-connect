@@ -40,7 +40,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await api.post('/auth/login', {  // ← Correction : on enlève /api
+      const response = await api.post('/auth/login', {  
         tel,
         motDePasse
       });
