@@ -26,8 +26,8 @@ const Footer = () => {
       </Typography>
 
       <Box sx={{ mt: 1 }}>
-        <Link href="mailto:gloiredakla28@gmail.com" color="primary" underline="hover" variant="caption">
-          Contact : gloiredakla28@gmail.com
+        <Link href="mailto:epttogo@yahoo.fr" color="primary" underline="hover" variant="caption">
+          Contact : epttogo@yahoo.fr
         </Link>
       </Box>
     </Box>
