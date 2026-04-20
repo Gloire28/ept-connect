@@ -4,9 +4,8 @@ import NetInfo from '@react-native-community/netinfo';
 import useAuthStore from '../store/authStore';
 import { offlineCache } from '../utils/offlineCache';
 
-// Base URL intelligente (priorité .env, fallback local)
-const baseURL = process.env.EXPO_PUBLIC_API_URL 
-  || 'http://192.168.1.68:5000/api';   
+const apiRoot = process.env.EXPO_PUBLIC_API_URL || 'http://192.168.1.68:5000';
+const baseURL = `${apiRoot}/api`;   
 
 const api = axios.create({
   baseURL,
@@ -24,7 +23,7 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Gestion réponse + offline intelligente
+// Gestion réponse + offline intelligente (conforme offline-first)
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -32,7 +31,6 @@ api.interceptors.response.use(
       useAuthStore.getState().logout();
       return Promise.reject(error);
     }
-
     const state = await NetInfo.fetch();
     if (!state.isConnected) {
       const cacheKey = error.config.url + (error.config.params ? JSON.stringify(error.config.params) : '');

@@ -1,35 +1,39 @@
 // admin-web/src/components/layout/Footer.jsx
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Stack, Divider } from '@mui/material';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <Box
-      component="footer"
-      sx={{
-        py: 3,
-        px: 2,
-        mt: 'auto',
-        backgroundColor: 'background.paper',
-        borderTop: '1px solid',
-        borderColor: 'divider',
-        textAlign: 'center',
-      }}
-    >
-      <Typography variant="body2" color="text.secondary">
-        © {currentYear} Église de Pentecôte du Togo (EPT) - EPT Connect Admin
-      </Typography>
+    <Box component="footer" sx={{ p: 4, mt: 'auto' }}>
+      <Divider sx={{ mb: 3, opacity: 0.5 }} />
+      <Stack 
+        direction={{ xs: 'column', sm: 'row' }} 
+        justifyContent="space-between" 
+        alignItems="center"
+        spacing={2}
+      >
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Box sx={{ width: 8, height: 8, bgcolor: 'success.main', borderRadius: '50%' }} />
+          <Typography variant="caption" sx={{ letterSpacing: 1, fontWeight: 700, textTransform: 'uppercase' }}>
+            EPT Connect Admin
+          </Typography>
+        </Stack>
+        
+        <Typography variant="caption" color="text.secondary">
+          © {new Date().getFullYear()} — Église de Pentecôte du Togo. Tous droits réservés.
+        </Typography>
 
-      <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-        Version 1.0 | Développé avec ❤️ pour l’édification des saints
-      </Typography>
-
-      <Box sx={{ mt: 1 }}>
-        <Link href="mailto:epttogo@yahoo.fr" color="primary" underline="hover" variant="caption">
-          Contact : epttogo@yahoo.fr
-        </Link>
-      </Box>
+        <Typography 
+          variant="caption" 
+          sx={{ 
+            px: 1.5, py: 0.5, 
+            bgcolor: 'action.selected', 
+            borderRadius: 10,
+            fontWeight: 500 
+          }}
+        >
+          v1.0.2-stable
+        </Typography>
+      </Stack>
     </Box>
   );
 };

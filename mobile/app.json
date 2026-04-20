@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EPT Connect",
-    "slug": "ept-connect",
+    "name": "EPT -Global",
+    "slug": "ept-global",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,21 +12,29 @@
       "backgroundColor": "#0A2540"
     },
     "updates": {
-      "url": "https://u.expo.dev/votre-project-id"
+      "url": "https://u.expo.dev/b7bab7b7-23ec-4bb6-a0d7-2ea26ad854a5"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.eptconnect.app"
+      "bundleIdentifier": "com.ept.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0A2540"
       },
-      "package": "com.eptconnect.app"
+      "package": "com.ept.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -39,8 +47,12 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "votre-project-id"
+        "projectId": "b7bab7b7-23ec-4bb6-a0d7-2ea26ad854a5"
       }
-    }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "owner": "gloir28"
   }
 }
